@@ -36,21 +36,22 @@ export function Footer() {
             <li>
               <span className="text-white/60">Email:&nbsp;</span>
               <a
-                href="mailto:hello@sbsconstruction.com"
+                href="mailto:sbscontructionnconsultancy@gmail.com"
                 className="hover:text-brand-accent"
               >
-                hello@sbsconstruction.com
+                sbscontructionnconsultancy@gmail.com
               </a>
             </li>
             <li>
               <span className="text-white/60">Phone:&nbsp;</span>
-              <a href="tel:+910000000000" className="hover:text-brand-accent">
-                +91 00000 00000
+              <a href="tel:+919002950361" className="hover:text-brand-accent">
+                +91 90029 50361
               </a>
             </li>
             <li className="text-white/70">
               <span className="text-white/60">Office:&nbsp;</span>
-              Address line 1, City, State – 000000
+              Araddhya Appartment, Flat 101, Floor 1, 71 GT Road, Manicktala,
+              Serampore, Hooghly – 712201
             </li>
           </ul>
         </div>
