@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 type Leader = {
   name: string;
-  initials: string;
+  photo: string;
   role: string;
   bio: string;
   strengths: string[];
@@ -9,8 +11,8 @@ type Leader = {
 const leaders: Leader[] = [
   {
     name: "Bapi Mondal",
-    initials: "BM",
-    role: "Co-Founder · Strategic Advisor",
+    photo: "/team/bapi.jpg",
+    role: "Co-Founder · Advisor & Investor",
     bio: "With over 20 years of experience in bullion trading, Bapi brings a sharp understanding of market behavior, risk cycles, and financial timing. His transition into real estate and forecasting adds a unique edge to SBS — where financial insight meets physical asset development.",
     strengths: [
       "Predictive market analysis",
@@ -20,7 +22,7 @@ const leaders: Leader[] = [
   },
   {
     name: "Sushen Ball",
-    initials: "SB",
+    photo: "/team/sushen-v2.jpg",
     role: "Co-Founder · Development Specialist",
     bio: "Sushen carries over two decades of hands-on experience in land trading, with deep roots in real estate planning and development. His practical knowledge of land dynamics, legal frameworks, and project execution ensures SBS operates with both precision and efficiency.",
     strengths: [
@@ -31,7 +33,7 @@ const leaders: Leader[] = [
   },
   {
     name: "Srikanta Bag",
-    initials: "SB",
+    photo: "/team/srikanta-v2.jpg",
     role: "Co-Founder · Market Intelligence & Forecasting",
     bio: "With more than 20 years in bullion trading, Srikanta brings deep expertise in market trends, asset behaviour, and forecasting methodologies. His ability to interpret economic signals and translate them into actionable real estate insights strengthens SBS's strategic backbone.",
     strengths: [
@@ -42,8 +44,8 @@ const leaders: Leader[] = [
   },
   {
     name: "Sayan Chakrabarty",
-    initials: "SC",
-    role: "Director · International Liaison & Brand Strategy",
+    photo: "/team/sayan.jpg",
+    role: "Co-Founder · International Liaison & Brand Strategy",
     bio: "With over 15 years of experience across IT and finance, Sayan specialises in international liaisoning, partnerships, and brand development. His global perspective and multi-industry exposure help position SBS as a forward-looking and well-connected organisation.",
     strengths: [
       "International business coordination",
@@ -81,8 +83,14 @@ export function Leadership() {
               className="group flex flex-col gap-5 rounded-2xl bg-white border border-brand-border p-7 sm:p-8 transition hover:border-brand-accent/60 hover:shadow-lg"
             >
               <header className="flex items-start gap-5">
-                <div className="shrink-0 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-brand-primary text-brand-accent-soft font-display font-bold text-xl ring-1 ring-brand-primary/10">
-                  {leader.initials}
+                <div className="shrink-0 relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-brand-accent/30 ring-offset-2 ring-offset-white">
+                  <Image
+                    src={leader.photo}
+                    alt={`Portrait of ${leader.name}`}
+                    fill
+                    sizes="80px"
+                    className="object-cover object-top"
+                  />
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-bold text-brand-primary leading-tight">
