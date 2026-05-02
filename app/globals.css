@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens — derived from the SBS logo (deep navy + warm gold).
+ */
+:root {
+  --brand-primary: #142847;   /* deep navy — logo body, headings, footer */
+  --brand-accent:  #b8924b;   /* warm gold — logo highlight, CTAs */
+  --brand-accent-soft: #c9a566;
+  --brand-dark:    #0a1628;   /* near-black navy — body text on light bg */
+  --brand-light:   #faf7f1;   /* warm cream — page background */
+  --brand-muted:   #5a6b87;   /* slate-blue — secondary text */
+  --brand-border:  #e6dfd2;   /* warm beige — dividers, inputs */
+}
+
+@theme inline {
+  --color-brand-primary:      var(--brand-primary);
+  --color-brand-accent:       var(--brand-accent);
+  --color-brand-accent-soft:  var(--brand-accent-soft);
+  --color-brand-dark:         var(--brand-dark);
+  --color-brand-light:        var(--brand-light);
+  --color-brand-muted:        var(--brand-muted);
+  --color-brand-border:       var(--brand-border);
+
+  --font-sans:    var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+}
