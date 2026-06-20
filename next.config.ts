@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/.well-known/keybase.txt',
+        destination: '/keybase.txt',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
